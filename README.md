@@ -244,7 +244,6 @@ h1, h2 {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Andrés Covaleda</title>
-  <!-- Enlace a tu hoja de estilos externa -->
   <link rel="stylesheet" href="prueba.css">
 </head>
 <body>
