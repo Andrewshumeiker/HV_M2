@@ -202,30 +202,25 @@ li {
         </ul>
 
         <!-- Proyectos -->
-        <h2 id="proyectos">Proyectos</h2>
-        <ul>
-          <li>Analista de datos para entrenamiento de IA.</li>
-          <li>Redes neuronales para clasificación de imágenes.</li>
-          <li>Automatización de sistemas mecatrónicos.</li>
-          <li>Simulación de sistemas robóticos en MATLAB/Simulink.</li>
-        </ul>
+<h2 id="proyectos">Proyectos</h2>
 
-        <!-- Contacto -->
-        <h2 id="contacto">Contacto</h2>
-        <p>
-          Teléfono: 3012562331<br>
-          Email: andrescovaleda07@hotmail.com
-        </p>
-
-        <!-- Referencias -->
-        <h2>Referencias</h2>
-        <p>Disponibles a solicitud.</p>
-      </div>
-    </div>
+<!-- Tarjeta visual de proyectos -->
+<div class="proyectos-grid">
+  <div class="box proyecto fade-in">
+    <img src="./images/proyecto1.jpg" alt="Imagen Proyecto 1" class="proyecto-img">
+    <h3>Clasificación de Imágenes con Redes Neuronales</h3>
+    <p>Modelo de red neuronal convolucional (CNN) para clasificar imágenes de objetos con alta precisión. Desarrollado en Python usando TensorFlow.</p>
+    <a href="https://github.com/andrescovaleda/clasificador-imagenes" class="proyecto-link" target="_blank">Ver en GitHub</a>
   </div>
 
-</body>
-</html>
+  <div class="box proyecto fade-in">
+    <img src="./images/proyecto2.jpg" alt="Imagen Proyecto 2" class="proyecto-img">
+    <h3>Automatización de Sistemas Mecatrónicos</h3>
+    <p>Sistema automatizado de control y monitoreo de actuadores con sensores, usando Arduino y comunicación serial con interfaz en MATLAB.</p>
+    <a href="https://github.com/andrescovaleda/sistema-automatizado" class="proyecto-link" target="_blank">Ver en GitHub</a>
+  </div>
+</div>
+
 
 
 ```
