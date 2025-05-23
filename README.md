@@ -421,3 +421,125 @@ h1, h2 {
 </body>
 </html>
 ```
+# FLIP CARD
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio con Flip Card</title>
+  <style>
+    /* Estilos base */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3e5f5;
+      color: #3e1f47;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    /* Contenedor de la flip card */
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      perspective: 1000px; /* para el efecto 3D */
+      cursor: pointer;
+    }
+
+    /* La tarjeta en sí */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Cuando tiene la clase flipped, se gira */
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Frontal y trasera */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(106, 27, 154, 0.6);
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      color: white;
+    }
+
+    /* Frente */
+    .flip-card-front {
+      background: linear-gradient(135deg, #7b1fa2, #6a1b9a);
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+
+    /* Dorso */
+    .flip-card-back {
+      background: linear-gradient(135deg, #ab47bc, #ce93d8);
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      font-size: 1em;
+      text-align: left;
+    }
+
+    /* Scroll dentro de la card back si hay mucho texto */
+    .flip-card-back::-webkit-scrollbar {
+      width: 6px;
+    }
+    .flip-card-back::-webkit-scrollbar-thumb {
+      background-color: #6a1b9a;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Portafolio de Andrés Covaleda</h1>
+
+  <div class="flip-card" id="proyectosCard">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Proyectos
+      </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>Analista y Validador de Datos: revisión y corrección de datos para modelos IA.</li>
+          <li>Desarrollo de Algoritmos IA: redes neuronales para clasificación de imágenes.</li>
+          <li>Automatización Mecatrónica: diseño e integración de sensores y control.</li>
+          <li>Simulación de Sistemas Dinámicos: modelado en MATLAB y Simulink.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Capturamos la tarjeta y le añadimos toggle para flip al click
+    const card = document.getElementById('proyectosCard');
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  </script>
+
+</body>
+</html>
+
+```
+
