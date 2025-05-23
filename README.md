@@ -2,140 +2,231 @@
 This repository is for the training of week 1 module 2
 # CSS
 ```css
-.shadowbox {
-  width: 17em;
-  border: 0px solid #333;
-  box-shadow: px 8px 5px #444;
-  padding: 8px 12px;
-  background-image: linear-gradient(180deg, #b4b4b4, #b4b4b4, #b4b4b4);
+./* === RESET GENERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.box{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 17em;
-    border-radius: 10px;
-    box-shadow: 0px -1px 0px -3px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px -1px 0px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 0px -3px rgba(0,0,0,0.75);
-    background-image: linear-gradient(180deg, #9f78e6, #ad6464, #b4b4b4);
-    
+
+/* === CUERPO Y FUENTE === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3e5f5; /* lavanda suave */
+  color: #3e1f47;
+  line-height: 1.6;
 }
-.img{
-  width: 200px;
+
+/* === BARRA DE NAVEGACIÓN === */
+.navbar {
+  background-color: #6a1b9a; /* morado oscuro */
+  padding: 1em 2em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #d1c4e9; /* lavanda claro */
+}
+
+/* === ENCABEZADO PRINCIPAL === */
+.main-header {
+  background-color: #7b1fa2; /* púrpura intermedio */
+  color: white;
+  text-align: center;
+  padding: 2.5em 1em;
+}
+
+.main-img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  aspect-ratio: 1;
   object-fit: cover;
+  border: 4px solid #f3e5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1em;
 }
+
+.main-info h1 {
+  font-size: 2em;
+}
+
+.main-info p {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+/* === SECCIÓN LATERAL (INFORMACIÓN PERSONAL) === */
+.sidebar {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* === SECCIÓN PRINCIPAL (DESCRIPCIÓN, PROYECTOS...) === */
+.main-content {
+  flex: 2;
+  min-width: 500px;
+}
+
+/* === CAJAS DE CONTENIDO === */
+.box {
+  background: linear-gradient(to bottom, #ce93d8, #e1bee7, #f3e5f5); /* degradado morado claro */
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2em;
+}
+
+/* === TÍTULOS Y SUBTÍTULOS === */
+h2 {
+  border-bottom: 2px solid #6a1b9a;
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+  color: #4a148c;
+}
+
+h3 {
+  color: #6a1b9a;
+  margin-top: 1.5em;
+}
+
+/* === LISTAS Y TEXTOS === */
+ul {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
 ```
 #HTML
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="prueba.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Andrés Covaleda</title>
+  <link rel="stylesheet" href="prueba.css" />
 </head>
 <body>
-    <div style="display: flex;">
-        <div style="justify-content: start; width:     300px ;">
-            <div class="box"style ="height:2000px" >
-                    <img src="./images/raf,360x360,075,t,fafafa_ca443f4786.jpg" alt="" style="width:180 px; height : 180px;"class="img";>
-                    <div>   
-                        <div>
-                            <h3>Contacto</h3>
-                                <p>
-                                    Telefono : 3012562331
-                                    <br>
-                                        Email: andrescovaleda07@hotmail.com
-                                        </p>
-                        </div>   
-                        <div>
-                            <h3>Estudios</h3>
-                                <b>Bachillerato Académico 
-                                </b>
-                                    <br>
-                                    <small>
-                                        IEM Santiago Perez <br>
-                                        17 de Febrero de 2014 a 06 de Diciembre 2019           
-                                    </small> <br>
-                                    <b>
-                                    Ingenieria mecatronica </b><br>
-                                    <small>
-                                    Escuela de Ingenieria de Antioquia  <br>
-                                    20 de junio de 2020, presente.
-                                 </small>
-                        </div>
-                        <div>
-                            <h3>
-                                Logros
-                            </h3>
-                            <ul>
-                                <li>
-                                    Nominación para lider de la comunidad
-                                </li>
-                                <li>
-                                    Rol de contralor en el bachillerato
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-            </div>
-        </div>
-        <div style="justify-content:end; width: 550px">
-            <h1>Andrés David Covaleda Vargas</h1>
-            <div>
-                <h3>
-                    Asesor de servicio al cliente
-                </h3>
-                    <p>Estudiante de séptimo semestre de ingenieria mecatronica en la universidad EIA, con habilidades en matemáticas, física, programación y resolución de problemas técnicos. Apasionado por la inteligencia artifical y el desarrollo de tecnologías emergentes, con experiencia en análisis de datos, automatización y aprendizaje de máquina. Busco aplicar mis conocimientos en un entorno desafiante que me permita contribuir al desarrollo y correción de modelos IA.</p>
-                </div>
-                <div>
-                    <h2>
-                    Experiencia y Habilidades
-                    <h3>
-                        Universidad
-                    </h3>
-                        <ul>
-                        <li>Matemáticas y Física: Modelado matemático, análisis numérico, dinámica y sistemas de control.
-                        </li>
-                        <li>Programación: Python, MATLAB, C++, JavaScript. Experiencia en desarrollo de algoritmos y optimización de código.
-                        </li>    
-                        <li>Inteligencia Artificial: Conceptos de machine learning, redes neuronales, procesamiento de datos y optimización de modelos.
-                        </li>
-                        <li>Automatización y Control: Sensores, actuadores, robótica y electrónica aplicada.
-                        </li>
-                        <li>    
-                        Análisis de Datos: Manejo de bases de datos, visualización y técnicas de minería de datos.
-                        </li>
-                            
-                        <li>Idiomas: Español (nativo), Inglés (intermedio-avanzado).
-                        </li>
-                        </ul>
 
-                    <h3>
-                        Proyectos  
-                    </h3>
-                        <p><ul>
-                            <li>Analista y Validador de Datos: Experiencia en revisión y corrección de datos utilizados para entrenar modelos de inteligencia artificial.</li>
-                            <li>Desarrollo de Algoritmos de IA: Implementación de redes neuronales para clasificación de imágenes y análisis de patrones en datos.</li>
-                            <li>Automatización de Sistemas Mecatrónicos: Diseño e integración de sensores en proyectos de control y automatización.</li>
-                            <li>
-                            Simulación de Sistemas Dinámicos: Modelado y análisis de sistemas robóticos en MATLAB y Simulink.
-                        </li>
-                        </ul>
-                        </p>
-                    <div>
-                        <h2> Referencias
-                            
-                        </h2>
-                    </div>
-                </div>
-            </div>
+  <!-- Barra de navegación superior -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#info-personal">Información Personal</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección principal del perfil -->
+  <header class="main-header">
+    <img src="./images/raf,360x360,075,t,fafafa_ca443f4786.jpg" alt="Foto de perfil" class="main-img" />
+    <div class="main-info">
+      <h1>Andrés David Covaleda Vargas</h1>
+      <p>Desarrollador de Software</p>
+    </div>
+  </header>
+
+  <!-- Contenido principal en 2 columnas -->
+  <div class="container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+    <!-- Columna lateral con datos personales -->
+    <div style="flex: 1 1 300px;" id="info-personal">
+      <div class="box">
+        <h2>Sobre mí</h2>
+
+        <!-- Información académica -->
+        <div>
+          <h3>Estudios</h3>
+          <b>Bachillerato Académico</b><br>
+          <small>IEM Santiago Pérez<br>17 de Febrero de 2014 - 06 de Diciembre 2019</small><br><br>
+          <b>Ingeniería Mecatrónica</b><br>
+          <small>Escuela de Ingeniería de Antioquia<br>Desde el 20 de junio de 2020</small>
+        </div>
+
+        <!-- Logros -->
+        <div>
+          <h3>Logros</h3>
+          <ul>
+            <li>Nominación a líder de la comunidad</li>
+            <li>Rol de contralor en el bachillerato</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna principal con experiencia y proyectos -->
+    <div style="flex: 2 1 600px;">
+      <div class="box">
+        <!-- Descripción -->
+        <h2>Perfil Profesional</h2>
+        <p>
+          Estudiante de séptimo semestre de Ingeniería Mecatrónica en la Universidad EIA. Apasionado por la inteligencia artificial y el desarrollo de tecnologías emergentes. Experiencia en análisis de datos, automatización y aprendizaje de máquina. Busco aplicar mis conocimientos en un entorno desafiante que me permita contribuir al desarrollo y mejora de modelos IA.
+        </p>
+
+        <!-- Habilidades -->
+        <h2>Experiencia y Habilidades</h2>
+        <ul>
+          <li>Modelado matemático, análisis numérico y sistemas de control.</li>
+          <li>Python, MATLAB, C++, JavaScript.</li>
+          <li>Machine Learning, redes neuronales, procesamiento de datos.</li>
+          <li>Sensores, actuadores, robótica y electrónica aplicada.</li>
+          <li>Bases de datos, visualización y minería de datos.</li>
+          <li>Español (nativo), Inglés (intermedio-avanzado).</li>
+        </ul>
+
+        <!-- Proyectos -->
+        <h2 id="proyectos">Proyectos</h2>
+        <ul>
+          <li>Analista de datos para entrenamiento de IA.</li>
+          <li>Redes neuronales para clasificación de imágenes.</li>
+          <li>Automatización de sistemas mecatrónicos.</li>
+          <li>Simulación de sistemas robóticos en MATLAB/Simulink.</li>
+        </ul>
+
+        <!-- Contacto -->
+        <h2 id="contacto">Contacto</h2>
+        <p>
+          Teléfono: 3012562331<br>
+          Email: andrescovaleda07@hotmail.com
+        </p>
+
+        <!-- Referencias -->
+        <h2>Referencias</h2>
+        <p>Disponibles a solicitud.</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
+
 
 ```
 # Version 2
