@@ -583,4 +583,39 @@ h1, h2 {
   }
 }
 ```
+# Habilidades 
+```html
+<h2>Habilidades</h2>
+<ul>
+  <li>Modelado matemático, análisis numérico y sistemas de control.</li>
+  <li>Python, MATLAB, C++, JavaScript.</li>
+  <li>Machine Learning, redes neuronales, procesamiento de datos.</li>
+  <li>Sensores, actuadores, robótica y electrónica aplicada.</li>
+  <li>Bases de datos, visualización y minería de datos.</li>
+  <li>Español (nativo), Inglés (intermedio-avanzado).</li>
+</ul>
+```
+# Formulario
+```
+<h2 id="contacto">Contacto</h2>
 
+<form action="https://formsubmit.co/andrescovaleda07@hotmail.com" method="POST" style="margin-bottom: 2em;">
+  <label for="name">Nombre:</label><br>
+  <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br>
+
+  <label for="email">Correo electrónico:</label><br>
+  <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br>
+
+  <label for="message">Mensaje:</label><br>
+  <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+  <button type="submit" style="background-color: #6a1b9a; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">Enviar</button>
+</form>
+
+<!-- Información de contacto adicional -->
+<p>
+  Teléfono: 3012562331<br />
+  Email: andrescovaleda07@hotmail.com
+</p>
+
+```
