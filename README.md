@@ -537,4 +537,50 @@ h1, h2 {
 </html>
 
 ```
+```css
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.proyecto-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-link {
+  display: inline-block;
+  margin-top: 1em;
+  color: #4a148c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.proyecto-link:hover {
+  transform: scale(1.05);
+  color: #7b1fa2;
+}
+
+/* === ANIMACIÓN SIMPLE === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
 
